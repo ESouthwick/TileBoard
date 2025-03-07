@@ -1,0 +1,39 @@
+.app {
+  margin-left: 325px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.main-container {
+  display: flex;
+  gap: 20px;
+  transition: all 0.3s ease;
+  width: 100%;
+  justify-content: center;
+  margin-top: 20px; /* Ensure space below sticky Box */
+}
+
+.main-container.table-hidden .board {
+  margin: 0 auto;
+}
+
+.main-container.board-hidden .team-list {
+  margin: 0 auto;
+  width: 800px;
+}
+
+.board {
+  transition: all 0.3s ease;
+}
+
+.team-list {
+  width: 400px;
+  transition: width 0.3s ease;
+}
+
+.main-container:not(.board-hidden) .team-list {
+  width: 600px;
+}
