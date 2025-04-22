@@ -1,54 +1,72 @@
-# React + TypeScript + Vite
+# TileBoard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A web-based interactive tile board application built with React, Konva, and Material-UI. Deployed at [https://esouthwick.github.io/TileBoard/](https://esouthwick.github.io/TileBoard/).
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Interactive canvas for creating and manipulating tiles using [Konva](https://konvajs.org/).
+- Modern UI components powered by [Material-UI](https://mui.com/).
+- Responsive design with React and Emotion for styling.
+- Deployed via GitHub Pages.
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- [Node.js](https://nodejs.org/) (v18 or higher recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+
+### Installation
+
+1. Clone the repository:
+ ```bash
+git clone https://github.com/esouthwick/TileBoard.git
+cd TileBoard
+  ```
+2. Install dependencies:
+  ```bash
+npm install
+  ```
+
+### Available Scripts
+In the project directory, you can run:
+npm run dev: Runs the app in development mode. Open http://localhost:5173 to view it in the browser.
+
+npm run build: Builds the app for production to the dist folder.
+
+npm run deploy: Deploys the built app to GitHub Pages.
+
+### Project Structure
+```├── src/
+├── components/
+│   ├── board.tsx 
+│   ├── inputs.tsx 
+│   └── table.tsx 
+└── app.tsx             
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Dependencies
+React & React DOM (^19.0.0): Core libraries for building the UI.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Konva (^9.3.18) & React-Konva (^19.0.3): For canvas-based tile interactions.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Material-UI (^6.4.6): UI components and icons.
+
+Emotion (^11.14.0): Styled components and CSS-in-JS.
+
+### Dev Dependencies
+Vite (^6.2.0): Fast development server and build tool.
+
+TypeScript (~5.7.2): Static typing for JavaScript.
+
+ESLint (^9.21.0): Linting for code quality.
+
+gh-pages (^6.3.0): For deploying to GitHub Pages.
+
+### Acknowledgments
+Built with Vite for a fast development experience.
+
+Powered by Konva for canvas rendering.
+
+Styled with Material-UI and Emotion.
+
